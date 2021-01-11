@@ -34,6 +34,7 @@
 }
 \RequirePackage{listings}
 \RequirePackage{minted}
+\RequirePackage{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,11 +50,22 @@
 { }               % Space after theorem head
 {}                % Theorem head spec
 \theoremstyle{sltheorem}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\mkthms}{
+	\newtheorem{definition}{Definition}[section]
+	\newtheorem{theorem}{Theorem}[section]
+	\newtheorem{lemma}[theorem]{Lemma}
+	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{proposition}[theorem]{Proposition}
+	\newtheorem{example}[section]{Example}
+}
+\newcommand{\mkfpmthms}{
+	\newtheorem{theorem}{Theorem}[subsection]
+	\newtheorem{definition}[theorem]{Definition}
+	\newtheorem{lemma}[theorem]{Lemma}
+	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{proposition}[theorem]{Proposition}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Maths commands and operators 									%%%%%
@@ -133,8 +145,10 @@
 % functions
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\E}{\mathbb{E}}
-\DeclareMathOperator{\V}{Var}
+\newcommand{\V}{\Var}
+\DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Cor}{Cor}
 
 % Distributions
 \DeclareMathOperator{\Geom}{Geom}
