@@ -50,6 +50,14 @@
 { }               % Space after theorem head
 {}                % Theorem head spec
 \theoremstyle{sltheorem}
+\newcommand{\mkanonthms}{
+	\newtheorem*{theorem*}{Theorem}
+	\newtheorem*{definition*}{Definition}
+	\newtheorem*{lemma*}{Lemma}
+	\newtheorem*{corollary*}{Corollary}
+	\newtheorem*{proposition*}{Proposition}
+	\newtheorem*{example*}{Example}
+}
 \newcommand{\mkthms}{
 	\newtheorem{definition}{Definition}[section]
 	\newtheorem{theorem}{Theorem}[section]
@@ -57,6 +65,7 @@
 	\newtheorem{corollary}[theorem]{Corollary}
 	\newtheorem{proposition}[theorem]{Proposition}
 	\newtheorem{example}{Example}[section]
+	\mkanonthms
 }
 \newcommand{\mkfpmthms}{
 	\newtheorem{theorem}{Theorem}[subsection]
@@ -64,7 +73,10 @@
 	\newtheorem{lemma}[theorem]{Lemma}
 	\newtheorem{corollary}[theorem]{Corollary}
 	\newtheorem{proposition}[theorem]{Proposition}
+	\newtheorem{example}{Example}[section]
+	\mkanonthms
 }
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,18 +85,20 @@
 
 %%%%% Pure maths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
 \renewcommand{\C}{\mathbb{C}}
-\DeclareMathOperator{\lub}{LUB}
-\DeclareMathOperator{\glb}{GLB}
+\DeclareMathOperator{\lub}{\sup}
+\DeclareMathOperator{\glb}{\inf}
 \DeclareMathOperator{\hcf}{hcf}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\cl}{cl} % equivalence class, PPS
 \newcommand{\inv}[1]{#1^{-1}}
 \DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\e}{\varepsilon}
 
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
@@ -167,6 +181,7 @@
 \DeclareMathOperator{\rmse}{RMSE}
 \DeclareMathOperator{\sst}{SST}
 \DeclareMathOperator{\sse}{SSE}
+\DeclareMathOperator{\logit}{logit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Utilities  				 									%%%%%
