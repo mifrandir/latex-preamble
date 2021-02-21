@@ -77,6 +77,15 @@
 	\newtheorem{example}{Example}[section]
 	\mkanonthms
 }
+\newcommand{\mkawodeythms}{
+	\newtheorem{theorem}{Theorem}[section]
+	\newtheorem{definition}[theorem]{Definition}
+	\newtheorem{lemma}[theorem]{Lemma}
+	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{proposition}[theorem]{Proposition}
+	\newtheorem{example}{Example}[section]
+	\mkanonthms
+}
 
 
 
@@ -106,6 +115,9 @@
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\lra}{\langle}{\rangle}
 \DeclareMathOperator{\cod}{cod}
+\newcommand{\cat}[1]{\mathbf{#1}}
+\newcommand{\catar}[1]{\cat{#1}^\to}
+\newcommand{\catop}[1]{\cat{#1}^{op}}
 
 \setcounter{MaxMatrixCols}{20}
 
