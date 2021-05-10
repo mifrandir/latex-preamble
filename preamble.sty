@@ -133,6 +133,16 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Sub}{Sub}
 
+\def\varlim@@#1#2{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font lim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}
+    \expandafter#2\ifx#1\scriptscriptstyle\scriptscriptstyle\else\scriptstyle\fi\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand\colim{\mathop{\mathpalette\varlim@@\rightarrowfill@}\nmlimits@}
+\newcommand\catlim{\mathop{\mathpalette\varlim@@\leftarrowfill@}\nmlimits@}
+
 \setcounter{MaxMatrixCols}{20}
 
 %%%%% Logic %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
