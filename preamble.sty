@@ -108,7 +108,7 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+\renewcommand{\C}{\mathbb{C}}
 \newcommand{\I}{I\!I}
 \DeclareMathOperator{\lub}{\sup}
 \DeclareMathOperator{\glb}{\inf}
@@ -121,13 +121,14 @@
 \newcommand{\e}{\varepsilon}
 \DeclareMathOperator{\gim}{im}
 \DeclareMathOperator{\gke}{ker}
-\DeclareMathOperator{\stab}{Stab}
-\DeclareMathOperator{\orb}{Orb}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\orb}{orb}
 \DeclareMathOperator{\send}{send}
-\DeclareMathOperator{\fix}{Fix}
-\DeclareMathOperator{\conj}{Conj}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\bij}{bij}
 \DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator{\Mat}{Mat}
 \def\upset{\uparrow\!}
 \def\loset{\downarrow\!}
 
@@ -178,6 +179,7 @@
 \newcommand{\ih}{\vec i}
 \newcommand{\jh}{\vec j}
 \newcommand{\kh}{\vec k}
+\DeclareMathOperator{\rank}{rank}
 
 \newenvironment{amatrix}[1]{%
   \left[\begin{array}{@{}*{#1}{c}|c@{}}
