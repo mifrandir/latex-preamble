@@ -56,6 +56,7 @@
 	\newtheorem*{definition*}{Definition}
 	\newtheorem*{lemma*}{Lemma}
 	\newtheorem*{corollary*}{Corollary}
+	\newtheorem*{conjecture*}{Conjecture}
 	\newtheorem*{proposition*}{Proposition}
 	\newtheorem*{example*}{Example}
 }
@@ -64,6 +65,7 @@
 	\newtheorem{definition}[theorem]{Definition}
 	\newtheorem{lemma}[theorem]{Lemma}
 	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{conjecture}[theorem]{Conjecture}
 	\newtheorem{proposition}[theorem]{Proposition}
 	\newtheorem{example}[theorem]{Example}
 	\mkanonthms
@@ -73,6 +75,7 @@
 	\newtheorem{theorem}{Theorem}[section]
 	\newtheorem{lemma}[theorem]{Lemma}
 	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{conjecture}[theorem]{Conjecture}
 	\newtheorem{proposition}[theorem]{Proposition}
 	\newtheorem{example}{Example}[section]
 	\mkanonthms
@@ -82,21 +85,26 @@
 	\newtheorem{definition}[theorem]{Definition}
 	\newtheorem{lemma}[theorem]{Lemma}
 	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{conjecture}[theorem]{Conjecture}
 	\newtheorem{proposition}[theorem]{Proposition}
 	\newtheorem{example}[theorem]{Example}
+	\mkanonthms
 }
 \newcommand{\mkthmsthreeseparate}{
 	\newtheorem{theorem}{Theorem}[subsection]
 	\newtheorem{definition}{Definition}[subsection]
 	\newtheorem{lemma}[theorem]{Lemma}
 	\newtheorem{corollary}[theorem]{Corollary}
+	\newtheorem{conjecture}[theorem]{Conjecture}
 	\newtheorem{proposition}[theorem]{Proposition}
 	\newtheorem{example}{Example}[section]
 	\mkanonthms
 }
 \newcommand{\mkthms}{\mkthmstwoseparate}
-\newcommand{\mkfpmthms}{\mkfpmthms}
+\newcommand{\mkfpmthms}{\mkthmsthreeunified}
 \newcommand{\mkawodeythms}{\mkthmstwounified}
+
+\newcommand{\declarecommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Maths commands and operators 									%%%%%
@@ -104,49 +112,45 @@
 
 %%%%% Pure maths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\renewcommand{\C}{\mathbb{C}}
-\newcommand{\I}{I\!I}
-\DeclareMathOperator{\lub}{\sup}
-\DeclareMathOperator{\glb}{\inf}
-\DeclareMathOperator{\hcf}{hcf}
-\DeclareMathOperator{\lcm}{lcm}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\cl}{cl} % equivalence class, PPS
-\newcommand{\inv}[1]{#1^{-1}}
-\DeclareMathOperator{\GL}{GL}
-\newcommand{\e}{\varepsilon}
-\DeclareMathOperator{\gim}{im}
-\DeclareMathOperator{\gke}{ker}
-\DeclareMathOperator{\stab}{stab}
-\DeclareMathOperator{\orb}{orb}
-\DeclareMathOperator{\send}{send}
-\DeclareMathOperator{\fix}{fix}
-\DeclareMathOperator{\conj}{conj}
-\DeclareMathOperator{\bij}{bij}
-\DeclareMathOperator*{\argmax}{argmax}
-\DeclareMathOperator{\Mat}{Mat}
-\def\upset{\uparrow\!}
-\def\loset{\downarrow\!}
-
-\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclarePairedDelimiter{\lra}{\langle}{\rangle}
-\DeclarePairedDelimiter{\eqc}{[\![}{[\!]}
-\DeclareMathOperator{\cod}{cod}
-
-% Category Theory
-\newcommand{\cat}[1]{\mathbf{#1}}
-\newcommand{\catar}[1]{\cat{#1}^\to}
-\newcommand{\catop}[1]{\cat{#1}^{op}}
-\newcommand{\epi}{\twoheadrightarrow}
-\newcommand{\mono}{\rightarrowtail}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\Sub}{Sub}
-
+\declarecommand{\N}{\mathbb{N}}
+\declarecommand{\Z}{\mathbb{Z}}
+\declarecommand{\Q}{\mathbb{Q}}
+\declarecommand{\R}{\mathbb{R}}
+\declarecommand{\e}{\varepsilon}
+\declarecommand{\inv}[1]{#1^{-1}}
+\declarecommand{\C}{\mathbb{C}}
+\declarecommand{\I}{I\!I}
+\declarecommand{\upset}[1]{\uparrow\!#1}
+\declarecommand{\loset}[1]{\downarrow\!#1}
+\declarecommand{\cat}[1]{\mathbf{#1}}
+\declarecommand{\catar}[1]{\cat{#1}^\to}
+\declarecommand{\catop}[1]{\cat{#1}^{op}}
+\declarecommand{\epi}{\twoheadrightarrow}
+\declarecommand{\mono}{\rightarrowtail}
+\declarecommand{\ih}{\vec i}
+\declarecommand{\jh}{\vec j}
+\declarecommand{\kh}{\vec k}
+\declarecommand{\wbigcup}{\mathop{\bigcup}\displaylimits}
+\declarecommand{\wbigcap}{\mathop{\bigcap}\displaylimits}
+\declarecommand{\hs}{\hspace{0.7cm}}
+\declarecommand{\P}{\mathbb{P}}
+\declarecommand{\E}{\mathbb{E}}
+\declarecommand{\V}{\Var}
+\declarecommand\B[1]{\textbf{#1}}
+\declarecommand{\abs}[1]{\left\vert#1\right\vert}
+\declarecommand{\vabs}[1]{\left\Vert#1\right\Vert}
+\declarecommand{\sv}{\:|\:}
+\declarecommand{\vec}{\underline}
+\declarecommand{\p}{\partial}
+\declarecommand{\dv}[1]{\vec #1'}
+\declarecommand{\di}{\iint\limits}
+\declarecommand{\ti}{\iiint\limits}
+\declarecommand{\partialto}{\rightharpoonup}
+\declarecommand{\st}{\text{ s.t }}
+\declarecommand{\hoare}[3]{\{#1\}\:#2\:\{#3\}}
+\declarecommand{\eval}[2]{\left. #1 \right\rvert_{#2}}
+\declarecommand{\grad}{\vec\nabla}
+\declarecommand{\lapl}{\nabla^2}
 \def\varlim@@#1#2{%
   \vtop{\m@th\ialign{##\cr
     \hfil$#1\operator@font lim$\hfil\cr
@@ -154,105 +158,68 @@
     \expandafter#2\ifx#1\scriptscriptstyle\scriptscriptstyle\else\scriptstyle\fi\cr
     \noalign{\nointerlineskip\kern-\ex@}\cr}}%
 }
-\newcommand\colim{\mathop{\mathpalette\varlim@@\rightarrowfill@}\nmlimits@}
-\newcommand\catlim{\mathop{\mathpalette\varlim@@\leftarrowfill@}\nmlimits@}
+\declarecommand\colim{\mathop{\mathpalette\varlim@@\rightarrowfill@}\nmlimits@}
+\declarecommand\catlim{\mathop{\mathpalette\varlim@@\leftarrowfill@}\nmlimits@}
+\DeclareMathOperator{\arccosh}{\text{cosh}^{-1}}
+\DeclareMathOperator{\arccot}{\text{cot}^{-1}}
+\DeclareMathOperator{\arccoth}{\text{coth}^{-1}} 
+\DeclareMathOperator{\arccsc}{\text{csc}^{-1}}
+\DeclareMathOperator{\arccsch}{\text{csch}^{-1}}
+\DeclareMathOperator{\arcsech}{\text{sech}^{-1}}
+\DeclareMathOperator{\arcsinh}{\text{sinh}^{-1}}
+\DeclareMathOperator{\arctanh}{\text{tanh}^{-1}}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator{\Bern}{Bernoulli}
+\DeclareMathOperator{\bij}{bij}
+\DeclareMathOperator{\Binom}{Binom}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Cor}{Cor}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\dom}{dom}
+\DeclarePairedDelimiter{\eqc}{[\![}{[\!]}
+\DeclareMathOperator{\Exp}{Exponential}
+\DeclareMathOperator{\fix}{fix}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclareMathOperator{\GD}{Gamma}
+\DeclareMathOperator{\Geom}{Geom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\glb}{\inf}
+\DeclareMathOperator{\hcf}{hcf}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\img}{im}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\logit}{logit}
+\DeclarePairedDelimiter{\lra}{\langle}{\rangle}
+\DeclareMathOperator{\lub}{\sup}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\mse}{MSE}
+\DeclareMathOperator{\Normal}{Normal}
+\DeclareMathOperator{\orb}{orb}
+\DeclareMathOperator{\Poiss}{Poiss}
+\DeclareMathOperator{\range}{rng}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rmse}{RMSE}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\send}{send}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sse}{SSE}
+\DeclareMathOperator{\sst}{SST}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\Sub}{Sub}
+\DeclareMathOperator{\subst}{SUBST}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Unif}{Unif}
+
 
 \setcounter{MaxMatrixCols}{20}
-
-% Theoretical Computing
-\newcommand{\partialto}{\rightharpoonup}
-
-%%%%% Logic %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\renewcommand{\st}{\text{ s.t }}
-\newcommand*\lneg[1]{\overline{#1}}
-\newcommand{\wbigcup}{\mathop{\bigcup}\displaylimits}
-\newcommand{\wbigcap}{\mathop{\bigcap}\displaylimits}
-\DeclareMathOperator{\subst}{SUBST}
-\newcommand{\hoare}[3]{\{#1\}\:#2\:\{#3\}}
-
-%%%%% Linear Algebra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\renewcommand{\vec}{\underline}
-
-% unit vectors
-\newcommand{\ih}{\vec i}
-\newcommand{\jh}{\vec j}
-\newcommand{\kh}{\vec k}
-\DeclareMathOperator{\rank}{rank}
-
 \newenvironment{amatrix}[1]{%
   \left[\begin{array}{@{}*{#1}{c}|c@{}}
 }{%
   \end{array}\right]
 }
-
-\newcommand{\abs}[1]{\left\vert#1\right\vert}
-\newcommand{\vabs}[1]{\left\Vert#1\right\Vert}
-
-%%%%% Calculus %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% derivatives and integrals
-\newcommand{\p}{\partial}
-\newcommand{\dv}[1]{\vec #1'}
-\newcommand{\di}{\iint\limits}
-\newcommand{\ti}{\iiint\limits}
-\newcommand{\eval}[2]{\left. #1 \right\rvert_{#2}}
-
-% vector calculus
-\newcommand{\grad}{\vec\nabla}
-\newcommand{\lapl}{\nabla^2}
-\DeclareMathOperator{\curl}{curl}
-\renewcommand{\div}{\text{div}}
-
-\DeclareMathOperator{\sech}{sech}
-\DeclareMathOperator{\csch}{csch}
-\DeclareMathOperator{\arccot}{\text{cot}^{-1}}
-\DeclareMathOperator{\arccsc}{\text{csc}^{-1}}
-\DeclareMathOperator{\arccosh}{\text{cosh}^{-1}}
-\DeclareMathOperator{\arcsinh}{\text{sinh}^{-1}}
-\DeclareMathOperator{\arctanh}{\text{tanh}^{-1}}
-\DeclareMathOperator{\arcsech}{\text{sech}^{-1}}
-\DeclareMathOperator{\arccsch}{\text{csch}^{-1}}
-\DeclareMathOperator{\arccoth}{\text{coth}^{-1}} 
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\range}{rng}
-
-%%%%% Probability & Statistics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% functions
-\renewcommand{\P}{\mathbb{P}}
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\V}{\Var}
-\DeclareMathOperator{\Var}{Var}
-\DeclareMathOperator{\Cov}{Cov}
-\DeclareMathOperator{\Cor}{Cor}
-
-% Distributions
-\DeclareMathOperator{\Geom}{Geom}
-\DeclareMathOperator{\Binom}{Binom}
-\DeclareMathOperator{\Bern}{Bernoulli}
-\DeclareMathOperator{\Unif}{Unif}
-\DeclareMathOperator{\Exp}{Exponential}
-\DeclareMathOperator{\Poiss}{Poiss}
-\DeclareMathOperator{\GD}{Gamma}
-\DeclareMathOperator{\Normal}{Normal}
-
-% Stats
-\DeclareMathOperator{\mse}{MSE}
-\DeclareMathOperator{\rmse}{RMSE}
-\DeclareMathOperator{\sst}{SST}
-\DeclareMathOperator{\sse}{SSE}
-\DeclareMathOperator{\logit}{logit}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Utilities  				 									%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\hs}{\hspace{0.7cm}}
-\newcommand\B[1]{\textbf{#1}}
-\newcommand{\sv}{\:|\:}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \endinput
