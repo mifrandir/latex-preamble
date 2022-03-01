@@ -162,8 +162,7 @@
     \expandafter#2\ifx#1\scriptscriptstyle\scriptscriptstyle\else\scriptstyle\fi\cr
     \noalign{\nointerlineskip\kern-\ex@}\cr}}%
 }
-\declarecommand\colim{\mathop{\mathpalette\varlim@@\rightarrowfill@}\nmlimits@}
-\declarecommand\catlim{\mathop{\mathpalette\varlim@@\leftarrowfill@}\nmlimits@}
+\DeclareMathOperator{\adj}{adj}
 \DeclareMathOperator{\arccosh}{\text{cosh}^{-1}}
 \DeclareMathOperator{\arccot}{\text{cot}^{-1}}
 \DeclareMathOperator{\arccoth}{\text{coth}^{-1}} 
@@ -176,9 +175,11 @@
 \DeclareMathOperator{\Bern}{Bernoulli}
 \DeclareMathOperator{\bij}{bij}
 \DeclareMathOperator{\Binom}{Binom}
+\declarecommand\catlim{\mathop{\mathpalette\varlim@@\leftarrowfill@}\nmlimits@}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclareMathOperator{\cl}{cl}
 \DeclareMathOperator{\cod}{cod}
+\declarecommand\colim{\mathop{\mathpalette\varlim@@\rightarrowfill@}\nmlimits@}
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Cor}{Cor}
 \DeclareMathOperator{\Cov}{Cov}
@@ -203,6 +204,7 @@
 \DeclareMathOperator{\inc}{inc}
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\len}{len}
 \DeclareMathOperator{\logit}{logit}
 \DeclarePairedDelimiter{\lra}{\langle}{\rangle}
 \DeclareMathOperator{\lub}{\sup}
