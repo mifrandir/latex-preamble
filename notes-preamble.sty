@@ -9,6 +9,15 @@
 % Include main preamble
 \RequirePackage{preamble}
 
+\RequirePackage{fancyhdr}
+
+%\fancyhead[C]{\ifnum\value{chapter}>0 \thechapter.\ \fi\leftmark}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO,RE]{\leftmark}
+\fancyhead[RO,LE]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Font setup                                   					%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
