@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Package information											%%%%%
+%%%%% Package information                     %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{preamble}
-  [2020/11/11 MiltFra Preamble]
+[2020/11/11 MiltFra Preamble]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Page setup													%%%%%
+%%%%% Page setup                          %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage[a4paper]{geometry}
@@ -27,11 +27,11 @@
 \RequirePackage{mathtools}
 \RequirePackage{hyperref}
 \hypersetup{
-	colorlinks,
-	citecolor=black,
-	filecolor=black,
-	linkcolor=black,
-	urlcolor=black
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
 }
 \RequirePackage{listings}
 \RequirePackage{minted}
@@ -40,7 +40,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Theorems 														%%%%%
+%%%%% Theorems                            %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newtheoremstyle{sltheorem} {}                % Space above
@@ -53,53 +53,55 @@
 {}                % Theorem head spec
 \theoremstyle{sltheorem}
 \newcommand{\mkanonthms}{
-	\newtheorem*{theorem*}{Theorem}
-	\newtheorem*{definition*}{Definition}
-	\newtheorem*{lemma*}{Lemma}
-	\newtheorem*{corollary*}{Corollary}
-	\newtheorem*{conjecture*}{Conjecture}
-	\newtheorem*{proposition*}{Proposition}
-	\newtheorem*{example*}{Example}
+  \newtheorem*{theorem*}{Theorem}
+  \newtheorem*{definition*}{Definition}
+  \newtheorem*{lemma*}{Lemma}
+  \newtheorem*{corollary*}{Corollary}
+  \newtheorem*{conjecture*}{Conjecture}
+  \newtheorem*{proposition*}{Proposition}
+  \newtheorem*{example*}{Example}
+  \newtheorem*{algorithm*}{Algorithm}
 }
 \newcommand{\mkthmstwounified}{
-	\newtheorem{theorem}{Theorem}[section]
-	\newtheorem{definition}[theorem]{Definition}
-	\newtheorem{lemma}[theorem]{Lemma}
-	\newtheorem{corollary}[theorem]{Corollary}
-	\newtheorem{conjecture}[theorem]{Conjecture}
-	\newtheorem{proposition}[theorem]{Proposition}
-	\newtheorem{example}[theorem]{Example}
-	\mkanonthms
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{example}[theorem]{Example}
+  \newtheorem{algorithm}[theorem]{Algorithm}
+  \mkanonthms
 }
 \newcommand{\mkthmstwoseparate}{
-	\newtheorem{definition}{Definition}[section]
-	\newtheorem{theorem}{Theorem}[section]
-	\newtheorem{lemma}[theorem]{Lemma}
-	\newtheorem{corollary}[theorem]{Corollary}
-	\newtheorem{conjecture}[theorem]{Conjecture}
-	\newtheorem{proposition}[theorem]{Proposition}
-	\newtheorem{example}{Example}[section]
-	\mkanonthms
+  \newtheorem{definition}{Definition}[section]
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{example}{Example}[section]
+  \mkanonthms
 }
 \newcommand{\mkthmsthreeunified}{
-	\newtheorem{theorem}{Theorem}[subsection]
-	\newtheorem{definition}[theorem]{Definition}
-	\newtheorem{lemma}[theorem]{Lemma}
-	\newtheorem{corollary}[theorem]{Corollary}
-	\newtheorem{conjecture}[theorem]{Conjecture}
-	\newtheorem{proposition}[theorem]{Proposition}
-	\newtheorem{example}[theorem]{Example}
-	\mkanonthms
+  \newtheorem{theorem}{Theorem}[subsection]
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{example}[theorem]{Example}
+  \mkanonthms
 }
 \newcommand{\mkthmsthreeseparate}{
-	\newtheorem{theorem}{Theorem}[subsection]
-	\newtheorem{definition}{Definition}[subsection]
-	\newtheorem{lemma}[theorem]{Lemma}
-	\newtheorem{corollary}[theorem]{Corollary}
-	\newtheorem{conjecture}[theorem]{Conjecture}
-	\newtheorem{proposition}[theorem]{Proposition}
-	\newtheorem{example}{Example}[section]
-	\mkanonthms
+  \newtheorem{theorem}{Theorem}[subsection]
+  \newtheorem{definition}{Definition}[subsection]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{example}{Example}[section]
+  \mkanonthms
 }
 \newcommand{\mkthms}{\mkthmstwoseparate}
 \newcommand{\mkfpmthms}{\mkthmsthreeunified}
@@ -108,7 +110,7 @@
 \newcommand{\declarecommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Maths commands and operators 									%%%%%
+%%%%% Maths commands and operators                  %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Pure maths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,7 +140,7 @@
 \declarecommand{\wbigcup}{\mathop{\bigcup}\displaylimits}
 \declarecommand{\wbigcap}{\mathop{\bigcap}\displaylimits}
 \declarecommand{\hs}{\hspace{0.7cm}}
-\declarecommand{\P}{\mathbb{P}}
+\declarecommand{\P}{\mathcal{P}}
 \declarecommand{\E}{\mathbb{E}}
 \declarecommand{\V}{\Var}
 \declarecommand\B[1]{\textbf{#1}}
@@ -160,15 +162,15 @@
 \declarecommand{\nptime}{$\text{NP}_{\texttt{TIME}}$}
 \def\varlim@@#1#2{%
   \vtop{\m@th\ialign{##\cr
-    \hfil$#1\operator@font lim$\hfil\cr
-    \noalign{\nointerlineskip\kern1.5\ex@}
-    \expandafter#2\ifx#1\scriptscriptstyle\scriptscriptstyle\else\scriptstyle\fi\cr
-    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+      \hfil$#1\operator@font lim$\hfil\cr
+      \noalign{\nointerlineskip\kern1.5\ex@}
+      \expandafter#2\ifx#1\scriptscriptstyle\scriptscriptstyle\else\scriptstyle\fi\cr
+  \noalign{\nointerlineskip\kern-\ex@}\cr}}%
 }
 \DeclareMathOperator{\adj}{adj}
 \DeclareMathOperator{\arccosh}{\text{cosh}^{-1}}
 \DeclareMathOperator{\arccot}{\text{cot}^{-1}}
-\DeclareMathOperator{\arccoth}{\text{coth}^{-1}} 
+\DeclareMathOperator{\arccoth}{\text{coth}^{-1}}
 \DeclareMathOperator{\arccsc}{\text{csc}^{-1}}
 \DeclareMathOperator{\arccsch}{\text{csch}^{-1}}
 \DeclareMathOperator{\arcsech}{\text{sech}^{-1}}
@@ -236,11 +238,26 @@
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Unif}{Unif}
 
+\declarecommand{\cc}[1]{\left\lbrace#1\right\rbrace}
+\declarecommand{\rr}[1]{\left(#1\right)}
+\declarecommand{\rb}[1]{\left(#1\right]}
+\declarecommand{\br}[1]{\left[#1\right)}
+\declarecommand{\bb}[1]{\left[#1\right]}
+\declarecommand{\aa}[1]{\left\langle#1\right\rangle}
+\declarecommand{\av}[1]{\left\langle#1\right\vert}
+\declarecommand{\va}[1]{\left\vert#1\right\rangle}
+\declarecommand{\vv}[1]{\left\vert#1\right\vert}
+\declarecommand{\ava}[2]{\left\langle#1\.\vert\.#2\right\rangle}
 
 \setcounter{MaxMatrixCols}{20}
 \newenvironment{amatrix}[1]{%
   \left[\begin{array}{@{}*{#1}{c}|c@{}}
-}{%
+    }{%
   \end{array}\right]
 }
 \endinput
+
+\declarecommand{\qone}{\va{1}}
+\declarecommand{\qzero}{\va{0}}
+\declarecommand{\qplus}{\va{+}}
+\declarecommand{\qminus}{\va{-}}

@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Package information											%%%%%
+%%%%% Package information                     %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{homework-preamble}
-  [2020/11/11 MiltFra Homework Preamble]
+[2020/11/11 MiltFra Homework Preamble]
 
 % Include main preamble
 \RequirePackage{preamble}
@@ -12,14 +12,16 @@
 \RequirePackage{changepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Claims and Proofs												%%%%%
+%%%%% Claims and Proofs                       %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{claimproof}[1]{\par\noindent\emph{Proof.}\space#1}{\hfill $\blacksquare$}
 \newenvironment{subproof}{\begin{adjustwidth}{2em}{2em}}{\end{adjustwidth}}
 \theoremstyle{plain}
-\newtheorem{claim}{Claim}[section]
+\newcounter{claimcounter}
+\newtheorem{claim}[claimcounter]{Claim}
 \newtheorem*{claim*}{Claim}
+\newtheorem{lemma}[claimcounter]{Lemma}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,25 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Package information											%%%%%
+%%%%% Package information                     %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{notes-preamble}
-  [2020/11/11 MiltFra Notes Preamble]
+[2020/11/11 MiltFra Notes Preamble]
 
 % Include main preamble
 \RequirePackage{preamble}
-
 \RequirePackage{fancyhdr}
 
-%\fancyhead[C]{\ifnum\value{chapter}>0 \thechapter.\ \fi\leftmark}
-
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LO,RE]{\leftmark}
-\fancyhead[RO,LE]{\thepage}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
 \renewcommand{\headrulewidth}{0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Font setup                                   					%%%%%
+%%%%% Font setup                                            %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{fontspec}
