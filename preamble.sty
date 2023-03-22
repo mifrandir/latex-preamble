@@ -25,6 +25,7 @@
 \RequirePackage{nicefrac}
 \RequirePackage{siunitx}
 \RequirePackage{mathtools}
+\RequirePackage{todonotes}
 \RequirePackage{hyperref}
 \hypersetup{
   colorlinks,
@@ -37,6 +38,7 @@
 \RequirePackage{minted}
 \RequirePackage{proof}
 \RequirePackage{varioref}
+\RequirePackage{quiver}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,9 +131,12 @@
 \declarecommand{\F}{\mathbb{F}}
 \declarecommand{\upset}[1]{\uparrow\!#1}
 \declarecommand{\loset}[1]{\downarrow\!#1}
-\declarecommand{\cat}[1]{\mathbf{#1}}
+\declarecommand{\cat}[1]{\mathcal{#1}}
 \declarecommand{\catar}[1]{\cat{#1}^\to}
 \declarecommand{\catop}[1]{\cat{#1}^{op}}
+\declarecommand{\Set}{\textbf{Set}}
+\declarecommand{\Rel}{\textbf{Rel}}
+\declarecommand{\Hilb}{\textbf{Hilb}}
 \declarecommand{\epi}{\twoheadrightarrow}
 \declarecommand{\mono}{\rightarrowtail}
 \declarecommand{\ih}{\vec i}
@@ -177,6 +182,7 @@
 \DeclareMathOperator{\arcsinh}{\text{sinh}^{-1}}
 \DeclareMathOperator{\arctanh}{\text{tanh}^{-1}}
 \DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Bern}{Bernoulli}
 \DeclareMathOperator{\bij}{bij}
 \DeclareMathOperator{\Binom}{Binom}
@@ -248,8 +254,27 @@
 \declarecommand{\va}[1]{\left\vert#1\right\rangle}
 \declarecommand{\vv}[1]{\left\vert#1\right\vert}
 \declarecommand{\ava}[2]{\left\langle#1\.\vert\.#2\right\rangle}
+\declarecommand{\affine}[1]{\mathbf{A}^{#1}}
+\declarecommand{\proj}[1]{\mathbf{P}^{#1}}
+\declarecommand{\projv}[1]{\mathbf{P}\rr{#1}}
 
+\declarecommand{\Gal}[1]{\text{Gal}\rr{#1}}
+\declarecommand{\Eq}[1]{\text{Eq}\rr{#1}}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\identity}{id}
+%\DeclareMathOperator{\Pr}{Pr}
+\declarecommand{\dashto}{\dashrightarrow}
+\declarecommand{\iff}{if, and only if,}
+\DeclareMathOperator{\Bir}{Bir}
+
+\declarecommand{\qone}{\va{1}}
+\declarecommand{\qzero}{\va{0}}
+\declarecommand{\qplus}{\va{+}}
+\declarecommand{\qminus}{\va{-}}
 \setcounter{MaxMatrixCols}{20}
+
 \newenvironment{amatrix}[1]{%
   \left[\begin{array}{@{}*{#1}{c}|c@{}}
     }{%
@@ -257,7 +282,4 @@
 }
 \endinput
 
-\declarecommand{\qone}{\va{1}}
-\declarecommand{\qzero}{\va{0}}
-\declarecommand{\qplus}{\va{+}}
-\declarecommand{\qminus}{\va{-}}
+
