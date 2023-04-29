@@ -73,6 +73,7 @@
   \newtheorem{proposition}[theorem]{Proposition}
   \newtheorem{example}[theorem]{Example}
   \newtheorem{algorithm}[theorem]{Algorithm}
+  \newtheorem{axiom}{Axiom}
   \mkanonthms
 }
 \newcommand{\mkthmstwoseparate}{
@@ -111,6 +112,8 @@
 
 \newcommand{\declarecommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
 
+\declarecommand{\note}[1]{\todo[color=yellow!50]{#1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Maths commands and operators                  %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,6 +140,7 @@
 \declarecommand{\Set}{\textbf{Set}}
 \declarecommand{\Rel}{\textbf{Rel}}
 \declarecommand{\Hilb}{\textbf{Hilb}}
+\declarecommand{\FHilb}{\textbf{FHilb}}
 \declarecommand{\epi}{\twoheadrightarrow}
 \declarecommand{\mono}{\rightarrowtail}
 \declarecommand{\ih}{\vec i}
@@ -253,10 +257,12 @@
 \declarecommand{\av}[1]{\left\langle#1\right\vert}
 \declarecommand{\va}[1]{\left\vert#1\right\rangle}
 \declarecommand{\vv}[1]{\left\vert#1\right\vert}
-\declarecommand{\ava}[2]{\left\langle#1\.\vert\.#2\right\rangle}
+\declarecommand{\ava}[2]{\left\langle{#1}\vert{#2}\right\rangle}
 \declarecommand{\affine}[1]{\mathbf{A}^{#1}}
 \declarecommand{\proj}[1]{\mathbf{P}^{#1}}
 \declarecommand{\projv}[1]{\mathbf{P}\rr{#1}}
+\declarecommand{\pr}[1]{\text{Pr}\rr{#1}}
+\declarecommand{\prc}[2]{\text{Pr}\rr{#1\vert #2}}
 
 \declarecommand{\Gal}[1]{\text{Gal}\rr{#1}}
 \declarecommand{\Eq}[1]{\text{Eq}\rr{#1}}
@@ -264,7 +270,7 @@
 \DeclareMathOperator{\Hess}{Hess}
 \DeclareMathOperator{\mult}{mult}
 \DeclareMathOperator{\identity}{id}
-%\DeclareMathOperator{\Pr}{Pr}
+\DeclareMathOperator{\Bl}{Bl}
 \declarecommand{\dashto}{\dashrightarrow}
 \declarecommand{\iff}{if, and only if,}
 \DeclareMathOperator{\Bir}{Bir}
